@@ -19,7 +19,7 @@ import java.util.ArrayList;
         name = "aFiremaker", servers = { "Revival" },
         version = 0.1)
 public class Core extends Script {
-    ArrayList<Strategy> strategies = new ArrayList<>();
+    private ArrayList<Strategy> strategies = new ArrayList<>();
     private static Settings settings;
     private static Script core;
     @Override
@@ -33,6 +33,7 @@ public class Core extends Script {
         while(gui.isVisible()) {
             Time.sleep(500);
         }
+            
         if(gui.getSettings() == null) {
             Logger.addMessage("Invalid input, stopping script");
             stopScript();
